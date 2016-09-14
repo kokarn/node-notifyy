@@ -1,0 +1,41 @@
+{
+  "name": "node-notifyy",
+  "version": "1.0.0",
+  "description": "Send node application errors to Telegram using Notifyy-McNotifyFace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "pretest": "eslint index.js"
+  },
+  "engines": {
+    "node": "^6.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kokarn@github.com/kokarn/node-notifyy.git"
+  },
+  "keywords": [
+    "telegram",
+    "notifyy",
+    "error",
+    "logging"
+  ],
+  "author": "Kokarn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kokarn/node-notifyy/issues"
+  },
+  "homepage": "https://github.com/kokarn/node-notifyy#readme",
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-kokarn": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "kokarn/node",
+    "rules": {
+      "no-process-exit": [
+        "off"
+      ]
+    }
+  }
+}
