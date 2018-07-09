@@ -16,10 +16,6 @@ String or array with the tokens for the users we should notify.
 A default title for your messages.  
 E.g `Application crashed` or `We've been overrun by sub-atomic monkeys!`
 
-`exitAfterNotification`  
-Default: `false`  
-If we should exit the process after we've done the notification. Very blunt.    
-
 `handleErrors`  
 Default: `false`  
 Enable this if you want to catch all errors globally and send notifications for them.  
@@ -28,14 +24,17 @@ Use with caution as this might intercept other error handlers in some situations
 ## Methods
 
 `send`  
-Sends a notification.
-### Available properties
-Anything avaible for [Notifyy-McNotifyFace](https://github.com/kokarn/notifyy-mcnotifyface#available-parameters) with one addition.  
+Sends a notification.  
+Returns a Promise
 
-`exit`  
-Default: Value of `exitAfterNotification`  
-If we should exit after we've sent our telegram.
+### Available parameters
 
+| Key     | Required            | Type               |
+|---------|---------------------|--------------------|
+| title   | YES (if no message) | string             |
+| message | YES (if no title)   | string             |
+| url     | NO                  | url-encoded string |
+| code    | NO                  | string             |
 
 ## Examples
 
