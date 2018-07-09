@@ -39,6 +39,20 @@ If we should exit after we've sent our telegram.
 
 ## Examples
 
+Send a message
+
+```javascript
+const Notifyy = require( 'node-notifyy' );
+let notifyy = new Notifyy( {
+    users: '*TOKEN*'
+} );
+
+notifyy.send( {
+    message: 'My message contents',
+    title: 'My message title',
+} );
+```
+
 Use as a notification for a single try/catch
 
 ```javascript
