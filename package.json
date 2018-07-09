@@ -27,11 +27,11 @@
   },
   "homepage": "https://github.com/kokarn/node-notifyy#readme",
   "devDependencies": {
-    "eslint": "^3.5.0",
-    "eslint-config-kokarn": "^1.0.0"
+    "eslint": "^4.19.1",
+    "eslint-config-kokarn": "^3.0.2"
   },
   "eslintConfig": {
-    "extends": "kokarn/node",
+    "extends": "kokarn/nodejs",
     "rules": {
       "no-process-exit": [
         "off"
