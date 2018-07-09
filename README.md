@@ -17,7 +17,7 @@ A default title for your messages.
 E.g `Application crashed` or `We've been overrun by sub-atomic monkeys!`
 
 `exitAfterNotification`  
-Default: `true`  
+Default: `false`  
 If we should exit the process after we've done the notification. Very blunt.    
 
 `handleErrors`  

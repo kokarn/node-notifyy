@@ -7,7 +7,7 @@ class Notifyy {
         }
 
         this.defaults = {
-            exitAfterNotification: true,
+            exitAfterNotification: false,
             post: {
                 headers: {
                     'Content-Type': 'application/json',
