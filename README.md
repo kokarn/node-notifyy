@@ -42,17 +42,17 @@ If we should exit after we've sent our telegram.
 Use as a notification for a single try/catch
 
 ```javascript
-let Notifyy = require( 'node-notifyy' );
-let notifyy = new Notifyy({
+const Notifyy = require( 'node-notifyy' );
+let notifyy = new Notifyy( {
     users: '*TOKEN*'
-});
+} );
 
 try {
-    undefinedMethod()
-} catch ( error ){
+    undefinedMethod();
+} catch ( error ) {
     notifyy.send( {
         message: error.message,
-        code: error.stack
+        code: error.stack,
     } );
 }
 ```
@@ -60,14 +60,14 @@ try {
 With shorthand for standard errors
 
 ```javascript
-let Notifyy = require( 'node-notifyy' );
+const Notifyy = require( 'node-notifyy' );
 let notifyy = new Notifyy({
     users: '*TOKEN*'
 });
 
 try {
-    undefinedMethod()
-} catch ( error ){
+    undefinedMethod();
+} catch ( error ) {
     notifyy.send( error );
 }
 ```
@@ -75,11 +75,11 @@ try {
 Use to catch all errors
 
 ```javascript
-let Notifyy = require( 'node-notifyy' );
-let notifyy = new Notifyy({
+const Notifyy = require( 'node-notifyy' );
+let notifyy = new Notifyy( {
     users: '*TOKEN*',
-    handleErrors: true
-});
+    handleErrors: true,
+} );
 
-undefinedMethod()
+undefinedMethod();
 ```
