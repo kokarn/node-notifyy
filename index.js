@@ -42,7 +42,7 @@ class Notifyy {
 
     send ( sendOptions ) {
         if ( sendOptions instanceof Error ) {
-            let error = sendOptions;
+            const error = sendOptions;
 
             // eslint-disable-next-line no-param-reassign
             sendOptions = {
