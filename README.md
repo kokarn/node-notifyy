@@ -5,7 +5,7 @@ Module to send error messages to you on Telegram using [Notifyy-McNotifyFace](ht
 ## Installing
 
 ```zh
-npm install node-notifyy --save
+npm i node-notifyy
 ```
 
 ## Constructor options
