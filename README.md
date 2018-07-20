@@ -29,12 +29,13 @@ Returns a Promise
 
 ### Available parameters
 
-| Key     | Required            | Type               |
-|---------|---------------------|--------------------|
-| title   | YES (if no message) | string             |
-| message | YES (if no title)   | string             |
-| url     | NO                  | url-encoded string |
-| code    | NO                  | string             |
+| Key          | Required            | Type               |
+|--------------|---------------------|--------------------|
+| title        | YES (if no message) | string             |
+| message      | YES (if no title)   | string             |
+| url          | NO                  | url-encoded string |
+| code         | NO                  | string             |
+| notification | NO                  | boolean            |
 
 ## Examples
 
@@ -49,6 +50,21 @@ let notifyy = new Notifyy( {
 notifyy.send( {
     message: 'My message contents',
     title: 'My message title',
+} );
+
+```
+Send a message without notification
+
+```javascript
+const Notifyy = require( 'node-notifyy' );
+let notifyy = new Notifyy( {
+    users: '*TOKEN*'
+} );
+
+notifyy.send( {
+    message: 'My message contents',
+    title: 'My message title',
+    notification: false,
 } );
 ```
 

@@ -1,4 +1,5 @@
 const https = require( 'https' );
+const querystring = require( 'querystring' );
 
 const NOTIFYY_SUCCESS_CODE = 204;
 const NOTIFYY_ERROR_CODE = 400;
@@ -67,6 +68,15 @@ class Notifyy {
             }
 
             const requestOptions = Object.assign( {}, this.options.post );
+            const queryStringData = {};
+
+            if ( typeof sendData.notification !== 'undefined' ) {
+                queryStringData.notification = sendData.notification;
+
+                delete sendData.notification;
+            }
+
+            requestOptions.path = `${ requestOptions.path }?${ querystring.stringify( queryStringData ) }`;
 
             const postData = JSON.stringify( sendData );
 
